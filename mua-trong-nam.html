@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vì sao có mùa?</title>
+<style>
+:root{--bg:#f6f8f5;--card:#fff;--tx:#1d2a22;--mu:#5b6b61;--ac:#2f7d4f;--wa:#b4532a;--bd:#d9e2db;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--card:#1d2620;--tx:#e6efe9;--mu:#9fb0a5;--ac:#5fc08a;--wa:#e48a5e;--bd:#2f3d34}}
+:root[data-theme="dark"]{--bg:#141a16;--card:#1d2620;--tx:#e6efe9;--mu:#9fb0a5;--ac:#5fc08a;--wa:#e48a5e;--bd:#2f3d34}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:14px 0}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:0 0 8px}
+.tag{color:var(--ac);font-weight:700;font-size:13px;text-transform:uppercase}
+label{display:block;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin:6px 0;cursor:pointer}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:10px 16px;font-size:15px;cursor:pointer;margin-top:8px}
+button:disabled{opacity:.4}
+textarea{width:100%;box-sizing:border-box;min-height:90px;padding:8px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.bar{height:22px;border-radius:5px;color:#fff;font-size:13px;padding:0 8px;line-height:22px;margin:4px 0;white-space:nowrap}
+.hid{display:none}.mu{color:var(--mu);font-size:14px}.wa{color:var(--wa);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border:1px solid var(--bd);padding:6px;text-align:left}
+</style></head><body><main>
+<h1>Vì sao Trái Đất có mùa?</h1>
+<p class="mu">Học liệu tự kiểm tra, khoảng 5 phút. Em không cần tạo tài khoản.</p>
+
+<section class="card" id="s1">
+<div class="tag">Bước 1 · Em nghĩ gì?</div>
+<h2>Ở bán cầu Bắc, so với mùa đông, vào mùa hè Trái Đất ở vị trí nào so với Mặt Trời?</h2>
+<label><input type="radio" name="a" value="gan"> Gần Mặt Trời hơn</label>
+<label><input type="radio" name="a" value="xa"> Xa Mặt Trời hơn</label>
+<label><input type="radio" name="a" value="bang"> Khoảng cách gần như nhau</label>
+<p class="mu">Em chắc chắn đến mức nào?</p>
+<label><input type="radio" name="c" value="1"> Đoán thôi</label>
+<label><input type="radio" name="c" value="2"> Khá chắc</label>
+<label><input type="radio" name="c" value="3"> Rất chắc</label>
+<button id="b1" disabled>Khoá câu trả lời và xem bằng chứng</button>
+</section>
+
+<section class="card hid" id="s2">
+<div class="tag">Bước 2 · Bằng chứng</div>
+<h2>Số liệu khoảng cách Trái Đất - Mặt Trời</h2>
+<p id="yours" class="mu"></p>
+<div class="bar" style="width:92%;background:var(--ac)">Đầu tháng 1 (mùa đông ở bán cầu Bắc): khoảng 147,1 triệu km</div>
+<div class="bar" style="width:95%;background:var(--wa)">Đầu tháng 7 (mùa hè ở bán cầu Bắc): khoảng 152,1 triệu km</div>
+<p class="mu">Thanh dài hơn nghĩa là xa Mặt Trời hơn.</p>
+<table><tr><th>Thời điểm</th><th>Bán cầu Bắc (Hà Nội, Tokyo)</th><th>Bán cầu Nam (Sydney)</th></tr>
+<tr><td>Tháng 12</td><td>Mùa đông</td><td>Mùa hè</td></tr>
+<tr><td>Tháng 6</td><td>Mùa hè</td><td>Mùa đông</td></tr></table>
+<p>Hai câu hỏi cho em:</p>
+<p>1. Nếu mùa do khoảng cách quyết định, số liệu ở trên nói điều gì?<br>2. Cùng lúc, hai bán cầu có cùng khoảng cách tới Mặt Trời nhưng mùa lại ngược nhau. Điều đó cho em thấy gì?</p>
+<button id="b2">Em đã nghĩ xong, sang bước viết lại</button>
+</section>
+
+<section class="card hid" id="s3">
+<div class="tag">Bước 3 · Viết lại</div>
+<h2>Bây giờ em hiểu thế nào?</h2>
+<p class="mu">Viết lại bằng lời của em: trước đây em nghĩ gì, bằng chứng cho thấy gì, nay em hiểu ra sao. Gợi ý khung: "Trước đây em nghĩ… Nhưng số liệu cho thấy… Vì vậy em hiểu rằng mùa có thể do…"</p>
+<textarea id="t" placeholder="Viết ở đây…"></textarea><br>
+<button id="b3" disabled>Xem lời giải thích khoa học để so sánh</button>
+<div id="ans" class="hid">
+<p><span class="wa">Khoảng cách không phải nguyên nhân.</span> Trục Trái Đất nghiêng khoảng 23,5° so với mặt phẳng quỹ đạo. Khi một bán cầu nghiêng về phía Mặt Trời, ánh sáng chiếu tới gần vuông góc hơn và ngày dài hơn, nên nhận nhiều nhiệt hơn: đó là mùa hè. Bán cầu kia nghiêng ra xa nên là mùa đông.</p>
+<p class="mu">Hãy đối chiếu với câu viết của em. Phần nào em đã đúng, phần nào cần sửa?</p>
+<p class="mu">Nguồn số liệu: NASA (khoảng cách cận nhật và viễn nhật của Trái Đất).</p>
+</div>
+</section>
+<script>
+var $=function(i){return document.getElementById(i)},ans={};
+function chk(){ans.a=(document.querySelector('input[name=a]:checked')||{}).value;ans.c=(document.querySelector('input[name=c]:checked')||{}).value;$('b1').disabled=!(ans.a&&ans.c)}
+document.querySelectorAll('input').forEach(function(e){e.onchange=chk});
+$('b1').onclick=function(){var m={gan:'gần hơn',xa:'xa hơn',bang:'như nhau'};
+$('yours').textContent='Dự đoán của em: mùa hè Trái Đất '+m[ans.a]+' Mặt Trời. Hãy so với số liệu thật.';
+$('s2').classList.remove('hid');$('b1').disabled=true;$('s2').scrollIntoView({behavior:'smooth'})};
+$('b2').onclick=function(){$('s3').classList.remove('hid');$('s3').scrollIntoView({behavior:'smooth'})};
+$('t').oninput=function(){$('b3').disabled=this.value.trim().length<20};
+$('b3').onclick=function(){$('ans').classList.remove('hid');this.disabled=true};
+</script></main></body></html>
