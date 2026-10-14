@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vì sao Mặt Trời mọc và lặn?</title>
+<style>
+:root{--bg:#f6f8f5;--card:#fff;--tx:#1d2a22;--mu:#5b6b61;--ac:#2f7d4f;--wa:#b4532a;--bd:#d9e2db;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--card:#1d2620;--tx:#e6efe9;--mu:#9fb0a5;--ac:#5fc08a;--wa:#e48a5e;--bd:#2f3d34}}
+:root[data-theme="dark"]{--bg:#141a16;--card:#1d2620;--tx:#e6efe9;--mu:#9fb0a5;--ac:#5fc08a;--wa:#e48a5e;--bd:#2f3d34}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:14px 0}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:0 0 8px}
+.tag{color:var(--ac);font-weight:700;font-size:13px;text-transform:uppercase}
+label{display:block;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin:6px 0;cursor:pointer}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:10px 16px;font-size:15px;cursor:pointer;margin-top:8px}
+button:disabled{opacity:.4}
+textarea{width:100%;box-sizing:border-box;min-height:90px;padding:8px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.hid{display:none}.mu{color:var(--mu);font-size:14px}.wa{color:var(--wa);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border:1px solid var(--bd);padding:6px;text-align:left}
+svg{width:100%;border-radius:10px;display:block;margin-top:6px}
+</style></head><body><main>
+<h1>Vì sao Mặt Trời mọc và lặn?</h1>
+<p class="mu">Học liệu tự kiểm tra, khoảng 5 phút. Em không cần tạo tài khoản.</p>
+
+<section class="card" id="s1">
+<div class="tag">Bước 1 · Em nghĩ gì?</div>
+<h2>Hằng ngày em thấy Mặt Trời mọc ở hướng Đông và lặn ở hướng Tây. Theo em, điều này xảy ra vì:</h2>
+<label><input type="radio" name="a" value="Mặt Trời quay quanh Trái Đất mỗi ngày một vòng"> Mặt Trời quay quanh Trái Đất mỗi ngày một vòng</label>
+<label><input type="radio" name="a" value="Trái Đất tự quay quanh trục của nó"> Trái Đất tự quay quanh trục của nó</label>
+<label><input type="radio" name="a" value="Mặt Trời tự đi lên rồi đi xuống rồi tắt, sáng hôm sau lại mọc"> Mặt Trời tự đi lên rồi đi xuống, sáng hôm sau lại mọc</label>
+<p class="mu">Em chắc chắn đến mức nào?</p>
+<label><input type="radio" name="c" value="1"> Đoán thôi</label>
+<label><input type="radio" name="c" value="2"> Khá chắc</label>
+<label><input type="radio" name="c" value="3"> Rất chắc</label>
+<button id="b1" disabled>Khoá câu trả lời và xem bằng chứng</button>
+</section>
+
+<section class="card hid" id="s2">
+<div class="tag">Bước 2 · Thử và quan sát</div>
+<h2>Cùng một hiện tượng, nhìn từ hai nơi</h2>
+<p id="yours" class="mu"></p>
+<p><b>Hoạt động:</b> kéo thanh để cho Trái Đất tự quay. Chấm đỏ là em, đang đứng trên Trái Đất. Mặt Trời trên hình <b>luôn đứng yên</b>.</p>
+<p class="mu">Hình 1: nhìn từ ngoài không gian (phía trên Cực Bắc).</p>
+<svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#0b1530"/>
+<g id="rays" stroke="#ffd35a" stroke-opacity=".5" stroke-width="2"><path d="M335 70L150 60M335 100L150 100M335 130L150 140"/></g>
+<circle cx="350" cy="100" r="20" fill="#ffc933"/><text x="350" y="140" fill="#fff" font-size="12" text-anchor="middle">Mặt Trời (đứng yên)</text>
+<circle cx="150" cy="100" r="60" fill="#3b82c4"/><path d="M150 40A60 60 0 0 0 150 160Z" fill="#000" opacity=".5"/>
+<text x="95" y="104" fill="#fff" font-size="12" text-anchor="middle">Đêm</text><text x="205" y="104" fill="#fff" font-size="12" text-anchor="middle">Ngày</text>
+<text x="150" y="28" fill="#fff" font-size="12" text-anchor="middle">Trái Đất tự quay ↺ (Tây → Đông)</text>
+<circle id="me" r="6" fill="#ff3b3b" stroke="#fff" stroke-width="1.5"/></svg>
+<p class="mu">Hình 2: em đứng ở chấm đỏ, quay mặt về hướng Nam (Đông bên trái, Tây bên phải) và nhìn lên bầu trời.</p>
+<svg viewBox="0 0 400 160"><rect id="sk" width="400" height="160" fill="#7ec8ff"/><g id="st" opacity="0"><circle cx="40" cy="30" r="1.3" fill="#fff"/><circle cx="120" cy="60" r="1.3" fill="#fff"/><circle cx="210" cy="25" r="1.3" fill="#fff"/><circle cx="290" cy="55" r="1.3" fill="#fff"/><circle cx="360" cy="20" r="1.3" fill="#fff"/></g>
+<circle id="sn" r="14" fill="#ffc933"/>
+<rect y="120" width="400" height="40" fill="#4fae4f"/>
+<line id="sh" x1="200" y1="132" x2="200" y2="132" stroke="#000" stroke-opacity=".35" stroke-width="7" stroke-linecap="round"/>
+<rect x="196" y="100" width="8" height="32" fill="#6b4a2b"/><circle cx="200" cy="92" r="18" fill="#2f8f3f"/>
+<text x="12" y="150" font-size="13" fill="#fff">Đông</text><text x="388" y="150" font-size="13" fill="#fff" text-anchor="end">Tây</text></svg>
+<input type="range" id="ph" min="-180" max="180" step="1" value="-90" style="width:100%;margin-top:8px">
+<p>Giờ tại chỗ em: <b id="tm"></b> · <b id="dn"></b></p>
+<button id="pl">Cho Trái Đất tự quay</button>
+<p><b>Số liệu thật: cùng một lúc, giờ ở các nơi khác nhau</b> (lấy từ đồng hồ máy của em)</p>
+<table id="ct"></table>
+<p class="mu">Nơi nằm càng về phía Đông thì giờ càng sớm hơn. Giờ ở một số nơi có thể tính giờ mùa hè.</p>
+<p>Ba câu hỏi cho em:</p>
+<p>1. Khi kéo thanh, Mặt Trời ở Hình 1 có di chuyển không? Còn Mặt Trời ở Hình 2 thì sao?<br>2. Điều gì thật sự chuyển động, điều gì chỉ là "nhìn thấy" như vậy? (Gợi ý: nhớ cảm giác ngồi trên ô tô thấy hàng cây chạy ngược lại.)<br>3. Vì sao Hà Nội đã là buổi trưa trong khi Luân Đôn còn là sáng sớm?</p>
+<button id="b2">Em đã nghĩ xong, sang bước viết lại</button>
+</section>
+
+<section class="card hid" id="s3">
+<div class="tag">Bước 3 · Viết lại</div>
+<h2>Bây giờ em hiểu thế nào?</h2>
+<p class="mu">Viết lại bằng lời của em: trước đây em nghĩ gì, em đã quan sát được gì, nay em hiểu ra sao. Gợi ý khung: "Trước đây em nghĩ… Nhưng khi thử, em thấy… Vì vậy em hiểu rằng Mặt Trời mọc và lặn là do…"</p>
+<textarea id="t" placeholder="Viết ở đây…"></textarea><br>
+<button id="b3" disabled>Xem lời giải thích khoa học để so sánh</button>
+<div id="ans" class="hid">
+<p><span class="wa">Mặt Trời mọc ở hướng Đông và lặn ở hướng Tây là do Trái Đất tự quay quanh trục của nó từ Tây sang Đông.</span> Chuyển động của Mặt Trời trên bầu trời chỉ là chuyển động "nhìn thấy", còn chuyển động thật là Trái Đất tự quay (mỗi vòng khoảng 24 giờ).</p>
+<p class="mu">Hãy đối chiếu với câu viết của em. Phần nào em đã đúng, phần nào cần sửa?</p>
+<p class="mu">Lưu ý: mô hình trong học liệu cho thấy việc Trái Đất tự quay đủ để giải thích chuyển động nhìn thấy của Mặt Trời; số liệu giờ các thành phố lấy từ đồng hồ máy theo múi giờ chuẩn quốc tế.</p>
+</div>
+</section>
+<script>
+var $=function(i){return document.getElementById(i)},R=Math.PI/180,play=0,ans={};
+function chk(){var a=document.querySelector('input[name=a]:checked'),c=document.querySelector('input[name=c]:checked');ans.a=a&&a.value;ans.c=c&&c.value;$('b1').disabled=!(ans.a&&ans.c)}
+document.querySelectorAll('input[type=radio]').forEach(function(e){e.onchange=chk});
+$('b1').onclick=function(){$('yours').textContent='Dự đoán của em: '+ans.a+'. Hãy thử xem mô hình nói gì.';$('s2').classList.remove('hid');$('b1').disabled=true;$('s2').scrollIntoView({behavior:'smooth'})};
+function lp(a,b,t){return Math.round(a+(b-a)*t)}
+function upd(){var p=+$('ph').value,c=Math.cos(p*R),t=Math.max(0,Math.min(1,(c+.1)/.4));
+$('me').setAttribute('cx',150+60*c);$('me').setAttribute('cy',100-60*Math.sin(p*R));
+var sx=200+170*Math.sin(p*R),alt=Math.asin(Math.max(-1,Math.min(1,c))),sy=120-100*Math.max(c,-.3);
+$('sn').setAttribute('cx',sx);$('sn').setAttribute('cy',sy);
+$('sk').setAttribute('fill','rgb('+lp(11,126,t)+','+lp(21,200,t)+','+lp(48,255,t)+')');
+$('st').setAttribute('opacity',1-t);
+var L=c>.08?Math.min(150,36/Math.tan(alt)):0,d=sx<200?1:-1;
+$('sh').setAttribute('x2',200+d*L);$('sh').setAttribute('stroke-opacity',c>.08?.35:0);
+var h=12+p/15,hh=Math.floor(h),mm=Math.floor((h-hh)*60);
+$('tm').textContent=hh+':'+(mm<10?'0':'')+mm;
+$('dn').textContent=c>.05?'Ban ngày':(c>-.05?'Bình minh hoặc hoàng hôn':'Ban đêm')}
+function cities(){var Z=[['Hà Nội','Asia/Ho_Chi_Minh'],['Luân Đôn','Europe/London'],['New York','America/New_York']],s='<tr><th>Nơi</th><th>Giờ</th><th></th></tr>';
+Z.forEach(function(z){var h=0,m='00';try{new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:z[1]}).formatToParts(new Date()).forEach(function(x){if(x.type=='hour')h=+x.value%24;if(x.type=='minute')m=x.value})}catch(e){}
+s+='<tr><td>'+z[0]+'</td><td>'+(h<10?'0':'')+h+':'+m+'</td><td>'+(h>=6&&h<18?'☀️ ban ngày':'🌙 ban đêm')+'</td></tr>'});$('ct').innerHTML=s}
+$('ph').oninput=upd;
+$('pl').onclick=function(){play=!play;this.textContent=play?'Dừng':'Cho Trái Đất tự quay'};
+setInterval(function(){if(play){var v=+$('ph').value+.8;$('ph').value=v>180?-180:v;upd()}},40);
+setInterval(cities,30000);cities();upd();
+$('b2').onclick=function(){$('s3').classList.remove('hid');$('s3').scrollIntoView({behavior:'smooth'})};
+$('t').oninput=function(){$('b3').disabled=this.value.trim().length<20};
+$('b3').onclick=function(){$('ans').classList.remove('hid');this.disabled=true};
+</script></main></body></html>
